@@ -9,6 +9,11 @@ class Book_model extends CI_Model {
         $this->load->database();
     }
 
+    public function getList() {
+        $books = $this->db->get('books');
+        return $books;
+    }
+
     public function save() {
         // TODO: Create update
         if (!$this->id) {

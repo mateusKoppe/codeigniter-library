@@ -12,6 +12,23 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		<h1> Library </h1>
 		<p> This is just a basic Crud </p>
 
+		<table class="table">
+			<tr>
+				<th> Title </th>
+				<th> # </th>
+			</tr>
+			<?php foreach ($books->result() as $book): ?>
+			<tr>
+				<td>
+					<?php echo $book->name ?>
+				</td>
+				<td>
+					<a href="<?php echo base_url('library/edit/' . $book->id) ?>" class="btn btn-primary btn-sm" href="">View</a>
+				</td>
+			</tr>
+			<?php endforeach;?>
+		</table>
+
 		<div class="mt-3">
 			<a href="<?php echo base_url('library/create') ?>" class="btn btn-primary">Add</a>
 		</div>
