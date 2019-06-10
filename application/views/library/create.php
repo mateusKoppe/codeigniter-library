@@ -12,14 +12,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		<h1> Library </h1>
 		<p> This is just a basic Crud </p>
 
-        <form>
+        <form method="post">
             <div class="form-group">
                 <label for="nameInput">Name</label>
-                <input class="form-control" id="nameInput" placeholder="Name">
+                <input name="name" class="form-control" id="nameInput" placeholder="Name">
             </div>
             <div class="form-group">
                 <label for="descriptionInput">Description</label>
-                <input class="form-control" id="descriptionInput" placeholder="Description">
+                <textarea name="description" class="form-control" id="descriptionInput" placeholder="Description"></textarea>
             </div>
             <button type="submit" class="btn btn-primary">Submit</button>
         </form>
