@@ -65,7 +65,23 @@ class Library extends CI_Controller {
 
 		// TODO: Handle error
 		$success = $this->book->save();
-		var_dump($success);
+		if ($success) {
+			redirect('');
+		}
+	}
+
+	public function delete($id)
+	{
+		$this->load->model('Book_model', 'book');
+		$success = $this->book->loadById($id);
+
+		if (!$success) {
+			echo "404";
+			return;
+		}
+
+		// TODO: Handle error
+		$success = $this->book->delete();
 		if ($success) {
 			redirect('');
 		}

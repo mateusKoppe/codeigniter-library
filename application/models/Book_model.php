@@ -44,4 +44,10 @@ class Book_model extends CI_Model {
         $success = $this->db->update('books');
         return $success;
     }
+
+    public function delete() {
+        $success = $this->db->delete('books', ["id" => $this->id]);
+        unset($this->id);
+        return $success;
+    }
 }

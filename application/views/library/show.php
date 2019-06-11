@@ -25,6 +25,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 		<div class="mt-3">
 			<a href="<?php echo base_url('library/edit/' . $book->id) ?>" class="btn btn-primary">Edit</a>
+			<a href="<?php echo base_url('library/delete/' . $book->id) ?>" class="btn btn-danger">Delete</a>
         </div>
         <div class="mt-3">
             <a href="<?php echo base_url('') ?>" class="btn btn-link">Back</a>
