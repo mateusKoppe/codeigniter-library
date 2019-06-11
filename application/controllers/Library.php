@@ -27,6 +27,21 @@ class Library extends CI_Controller {
 		}
 	}
 
+	public function show($id)
+	{
+		$this->load->model('Book_model', 'book');
+		$success = $this->book->loadById($id);
+
+		if (!$success) {
+			echo "404";
+			return;
+		}
+
+		$this->load->view('library/show', [
+			'book' => $this->book
+		]);
+	}
+
 	public function edit($id)
 	{
 		$this->load->model('Book_model', 'book');

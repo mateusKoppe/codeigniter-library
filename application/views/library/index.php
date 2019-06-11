@@ -23,7 +23,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 					<?php echo $book->name ?>
 				</td>
 				<td>
-					<a href="<?php echo base_url('library/edit/' . $book->id) ?>" class="btn btn-primary btn-sm" href="">View</a>
+					<a href="<?php echo base_url('library/show/' . $book->id) ?>" class="btn btn-primary btn-sm" href="">View</a>
 				</td>
 			</tr>
 			<?php endforeach;?>
